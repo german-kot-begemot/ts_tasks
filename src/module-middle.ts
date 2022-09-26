@@ -58,3 +58,38 @@ if (price >= 1000 && price < 3000) {
 } else {
   discountedPrice = price;
 }
+
+/* Техническое задание
+Мяу! Напиши программу, которая определит ближайшее работающее место с молоком.
+Время записано в часах в переменную time.
+Молокозавод находится ближе всех. Он начинает работать в 8, а закрывается в 19. Перерыв на обед с 13 до 14.
+Дальше находится магазин. Он работает с 9 до 17. Перерыв на обед с 14 до 15.
+Дальше всех находится рынок. Он работает с 7 до 20 без перерывов.
+В остальное время все места закрыты и можно никуда не ходить.
+Вычисли, куда надо пойти за молоком и запиши значение true в одну из переменных: goToDairy (молокозавод), goToStore (магазин), goToMarket (рынок).
+*/
+const time: number = 15;
+let goToDairy: boolean = false;
+let goToStore: boolean = false;
+let goToMarket: boolean = false;
+
+if ((time >= 8 && time < 13) || (time >= 14 && time < 19)) {
+  goToDairy = true;
+} else if ((time >= 9 && time < 14) || (time >= 15 && time < 17)) {
+  goToStore = true;
+} else if (time >= 7 && time < 20) {
+  goToMarket = true;
+}
+
+/* Техническое задание
+Напиши программу, которая определяет сколько цифр в одном числе.
+Само число записано в переменную number.
+Найди количество цифр в этом числе и запиши результат в переменную quantity.
+*/
+let numberInput: number = 123;
+let quantityFind: number = 0;
+while (numberInput >= 1) {
+  numberInput /= 10;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  quantityFind++;
+}
